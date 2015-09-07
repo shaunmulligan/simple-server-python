@@ -1,8 +1,10 @@
 #Get the latest armv7 base image from
-#https://registry.hub.docker.com/u/resin/armv7hf-debian/
-FROM resin/armv7hf-debian:latest
+#https://registry.hub.docker.com/u/resin/resin/armv7hf-systemd/
+FROM resin/armv7hf-systemd
 
 MAINTAINER Shaun Mulligan <shaun@resin.io>
+
+ENV INITSYSTEM on
 
 #Install python2 and pip
 RUN apt-get update && apt-get install -yq --no-install-recommends \
